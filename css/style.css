@@ -9,7 +9,7 @@ body {
   overflow: auto; }
 
 *::selection {
-  background-color: #303f9f; }
+  background-color: #d32f2f; }
 
 html, body {
   height: 100%;
@@ -17,11 +17,11 @@ html, body {
   max-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #eaecf7;
+  background-color: white;
   font-size: 100%; }
 
 p, a, h1, h2, h3 {
-  color: #eaecf7;
+  color: white;
   line-height: 1.2;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -33,7 +33,7 @@ p, a, h1, h2, h3 {
   text-rendering: optimizeLegibility; }
 
 h1, h2, h3 {
-  color: #eaecf7;
+  color: white;
   line-height: 1.2;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -90,7 +90,7 @@ nav {
   right: 0;
   width: 100%;
   height: 2em;
-  background-color: #eaecf7;
+  background-color: white;
   z-index: 5; }
   nav ul {
     display: -webkit-box;
@@ -112,13 +112,13 @@ nav {
       display: inline; }
       nav ul li .nav-item {
         font-size: 1.2em;
-        color: #111754;
+        color: #8b1515;
         display: inline-block;
         padding: 0;
         margin: 0;
         text-transform: uppercase; }
         nav ul li .nav-item:hover {
-          color: #cfc060; }
+          color: #2cd0d0; }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
   nav {
@@ -135,7 +135,7 @@ nav {
   width: 100%;
   padding: 0;
   margin: 0 auto;
-  background-color: #3f51b5; }
+  background-color: #f44336; }
   .home .big-text {
     text-align: center;
     margin: 2% auto;
@@ -275,7 +275,7 @@ nav {
       -ms-animation-backface-visibility: hidden;
       -o-animation-backface-visibility: hidden;
       animation-backface-visibility: hidden;
-      color: #cfc060; }
+      color: #2cd0d0; }
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1); }
@@ -348,7 +348,7 @@ nav {
   width: 100%;
   min-height: 100vh;
   padding: 1.5em .5em 1em .5em;
-  background-color: #303f9f; }
+  background-color: #d32f2f; }
   .about .about-divider {
     margin: 0 0 0 0;
     padding: 1em 0 3em 0;
@@ -379,12 +379,12 @@ nav {
         flex-grow: 1;
         margin: 0 .75%;
         position: relative;
-        background-color: #3f51b5;
+        background-color: #f44336;
         transition: 0.2s;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24); }
         .about .about-divider .skills .skill:hover {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          background-color: #cfc060; }
+          background-color: #2cd0d0; }
         .about .about-divider .skills .skill h3 {
           position: absolute;
           margin: 0 auto;
@@ -414,7 +414,7 @@ nav {
   min-height: 100vh;
   width: 100%;
   padding: 0;
-  background-color: #3f51b5;
+  background-color: #f44336;
   padding: 1.5em .5em 1em .5em; }
   .work h1 {
     margin: 1.5em 0 .2em 0; }
@@ -460,11 +460,11 @@ nav {
         border: 0.4em rgba(255, 255, 255, 0) solid;
         border-radius: 2%; }
         .work .gallery .gallery-item a:hover {
-          border: 0.4em #eaecf7 solid; }
+          border: 0.4em white solid; }
         .work .gallery .gallery-item a h3 {
           -webkit-align-self: center;
           align-self: center;
-          color: #eaecf7;
+          color: white;
           padding: 5%;
           margin: 0 auto;
           text-shadow: 1px 0px 30px black;
@@ -509,7 +509,7 @@ footer {
   left: 0;
   right: 0;
   height: 2em;
-  background-color: #eaecf7; }
+  background-color: white; }
   footer .social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -526,19 +526,19 @@ footer {
     max-height: 100%;
     width: 75%;
     margin: 0 auto;
-    color: #7986cb; }
+    color: #e57373; }
     footer .social p {
       float: left;
       margin: 0;
       font-size: 1em;
-      color: #111754; }
+      color: #8b1515; }
       footer .social p:hover {
-        color: #cfc060; }
+        color: #2cd0d0; }
     footer .social a {
       font-size: 1.2em;
-      color: #111754; }
+      color: #8b1515; }
       footer .social a:hover {
-        color: #cfc060; }
+        color: #2cd0d0; }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
   footer {
@@ -566,7 +566,7 @@ footer {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #303f9f; }
+  background-color: #d32f2f; }
   .portfolio_piece .port_header {
     width: 100%;
     height: 300px;
@@ -628,12 +628,12 @@ footer {
         flex-grow: 1;
         margin: 0 .75%;
         position: relative;
-        background-color: #3f51b5;
+        background-color: #f44336;
         transition: 0.2s;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24); }
         .portfolio_piece .port_content .skills .skill:hover {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          background-color: #cfc060; }
+          background-color: #2cd0d0; }
         .portfolio_piece .port_content .skills .skill h3 {
           position: absolute;
           margin: 0 auto;
