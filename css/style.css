@@ -139,7 +139,7 @@ nav {
       font-size: 1.2em; } }
 @media (min-width: 1250px) {
   nav {
-    height: 3.5em; }
+    height: 3em; }
     nav ul li .nav-item {
       font-size: 1.5em; } }
 .home {
@@ -338,7 +338,7 @@ nav {
     letter-spacing: .5em; } }
 @media (min-width: 1250px) {
   .home .big-text {
-    font-size: 7.5em;
+    font-size: 5em;
     letter-spacing: .5em;
     font-weight: 900;
     line-height: .8; }
@@ -347,7 +347,7 @@ nav {
     letter-spacing: .6em;
     line-height: 1; }
   .home #arrow {
-    font-size: 7.5em; } }
+    font-size: 5em; } }
 .about {
   width: 100%;
   min-height: 100vh;
@@ -478,28 +478,32 @@ nav {
           background-color: rgba(63, 81, 181, 0.8); }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
-  .work .gallery {
-    width: 100%; }
-    .work .gallery .gallery-item {
-      width: 100%;
-      max-width: 32%;
-      min-width: 380px;
-      margin: 1em 1%; }
-      .work .gallery .gallery-item a h3 {
-        font-size: 1.2em; }
-      .work .gallery .gallery-item a p {
-        font-size: 1.2em; } }
+  .work {
+    padding: 0 .5em 1em .5em; }
+    .work .gallery {
+      width: 100%; }
+      .work .gallery .gallery-item {
+        width: 100%;
+        max-width: 32%;
+        min-width: 380px;
+        margin: 1em 1%; }
+        .work .gallery .gallery-item a h3 {
+          font-size: 1.2em; }
+        .work .gallery .gallery-item a p {
+          font-size: 1.2em; } }
 @media (min-width: 1250px) {
-  .work .gallery {
-    width: 100%; }
-    .work .gallery .gallery-item {
-      width: 30%;
-      max-width: 30%;
-      margin: 2em 1%; }
-      .work .gallery .gallery-item a h3 {
-        font-size: 1.5em; }
-      .work .gallery .gallery-item a p {
-        font-size: 1.2em; } }
+  .work {
+    padding: 0 .5em 1em .5em; }
+    .work .gallery {
+      width: 100%; }
+      .work .gallery .gallery-item {
+        width: 30%;
+        max-width: 30%;
+        margin: 2em 1%; }
+        .work .gallery .gallery-item a h3 {
+          font-size: 1.5em; }
+        .work .gallery .gallery-item a p {
+          font-size: 1.2em; } }
 footer {
   position: fixed;
   bottom: 0;
@@ -549,7 +553,7 @@ footer {
         font-size: 1.5em; } }
 @media (min-width: 1250px) {
   footer {
-    height: 3.5em; }
+    height: 3em; }
     footer .social {
       width: 30%;
       max-width: 30em; }
@@ -680,3 +684,5 @@ footer {
       .portfolio_piece .port_content .skills .skill h3 {
         bottom: -35px;
         font-size: 1em; } }
+
+/*# sourceMappingURL=style.css.map */

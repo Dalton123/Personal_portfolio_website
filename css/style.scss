@@ -271,7 +271,7 @@ nav {
 }
 @include breakpoint(big-screen) {
     nav {
-        height: 3.5em;
+        height: 3em;
         ul {
             li {
                 .nav-item {
@@ -290,7 +290,7 @@ nav {
     padding: 0;
     margin:0 auto;
     background-color: $color-500;
-    .big-text {        
+    .big-text {
         text-align: center;
         margin: 2% auto;
         font-size: $fz-med;
@@ -329,7 +329,7 @@ nav {
             font-size: $fz-med;
             letter-spacing: .5em;
         }
-    }    
+    }
 }
 @include breakpoint(small-med-screen) {
     .home {
@@ -343,12 +343,12 @@ nav {
             font-size: $fz-small;
             letter-spacing: .5em;
         }
-    } 
+    }
 }
 @include breakpoint(big-screen) {
     .home {
         .big-text {
-            font-size: $fz-big;
+            font-size: $fz-bigish;
             letter-spacing: .5em;
             font-weight: 900;
             line-height: .8;
@@ -359,7 +359,7 @@ nav {
             line-height: 1;
         }
         #arrow {
-            font-size: $fz-big;
+            font-size: $fz-bigish;
         }
     }
 }
@@ -397,17 +397,17 @@ nav {
                 flex-grow:1;
                 margin: 0 .75%;
                 position: relative;
-                background-color: $color-500; 
+                background-color: $color-500;
                 transition: $delay;
-                box-shadow: 
-                0 1px 1px rgba(0,0,0,0.12), 
+                box-shadow:
+                0 1px 1px rgba(0,0,0,0.12),
                 0 1px 1px rgba(0,0,0,0.24);
                 &:hover{
-                box-shadow: 
-                0 1px 3px rgba(0,0,0,0.12), 
+                box-shadow:
+                0 1px 3px rgba(0,0,0,0.12),
                 0 1px 2px rgba(0,0,0,0.24);
                 background-color: invert($color-700);
-                }                
+                }
                 h3 {
                     position: absolute;
                     margin: 0 auto;
@@ -483,7 +483,7 @@ nav {
             max-width: 100%;
             min-width: 250px;
             margin: .5em 1%;
-            position: relative;            
+            position: relative;
             img {
                 width:100%;
                 border-radius:2%;
@@ -523,6 +523,7 @@ nav {
 }
 @include breakpoint(medium-screen) {
     .work {
+        padding:0 .5em 1em .5em;
         .gallery {
             width: 100%;
             .gallery-item {
@@ -540,10 +541,11 @@ nav {
                 }
             }
         }
-    } 
+    }
 }
 @include breakpoint(big-screen) {
     .work {
+        padding:0 .5em 1em .5em;
         .gallery {
             width: 100%;
             .gallery-item {
@@ -560,7 +562,7 @@ nav {
                 }
             }
         }
-    } 
+    }
 }
 ////////////////////////////////////////////
 ////////////////  Footer  /////////////////
@@ -615,11 +617,11 @@ footer {
                 font-size: $fz-small;
             }
         }
-    } 
+    }
 }
 @include breakpoint(big-screen) {
     footer {
-        height: 3.5em;
+        height: 3em;
         .social {
             width: 30%;
             max-width:30em;
