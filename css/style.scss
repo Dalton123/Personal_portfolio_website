@@ -57,11 +57,11 @@ $delay:  .2s;
 // $color-900: rgba(183, 28, 28, 1);
 
 // DEEP ORANGE
-// $color-100: rgba(255, 204, 188, 1);
-// $color-300: rgba(255, 138, 101, 1);
-// $color-500: rgba(255, 87, 34, 1);
-// $color-700: rgba(230, 74, 25, 1);
-// $color-900: rgba(191, 54, 12, 1);
+$color-100: rgba(255, 204, 188, 1);
+$color-300: rgba(255, 138, 101, 1);
+$color-500: rgba(255, 87, 34, 1);
+$color-700: rgba(230, 74, 25, 1);
+$color-900: rgba(191, 54, 12, 1);
 
 // Deep-Purple
 // $color-100: rgb(209, 196, 233);
@@ -71,18 +71,11 @@ $delay:  .2s;
 // $color-900: rgb(49, 27, 146);
 
 // Indigo
-$color-100: rgb(197, 202, 233);
-$color-300: rgb(121, 134, 203);
-$color-500: rgb(63, 81, 181);
-$color-700: rgb(48, 63, 159);
-$color-900: rgb(26, 35, 126);
-
-// Brown
-// $color-100: rgba(214, 204, 200, 1);
-// $color-300: rgba(161, 135, 127, 1);
-// $color-500: rgba(121, 85, 72, 1);
-// $color-700: rgba(93, 64, 55, 1);
-// $color-900: rgba(62, 39, 35, 1);
+// $color-100: rgb(197, 202, 233);
+// $color-300: rgb(121, 134, 203);
+// $color-500: rgb(63, 81, 181);
+// $color-700: rgb(48, 63, 159);
+// $color-900: rgb(26, 35, 126);
 
 $light: lighten($color-100,10%);
 $dark: darken($color-900,10%);
@@ -175,7 +168,7 @@ h1, h2, h3 {
 }
 h1 {
     text-shadow: 0 0 5px rgba(0,0,0,.3);
-    font-family: 'Source Sans Pro',sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 h2, h3 {
     text-shadow: 2px 2px 10px rgba(0,0,0,.1);
@@ -185,7 +178,7 @@ p {
     text-shadow: 2px 2px 10px rgba(0,0,0,.3);
     a {
         text-decoration: underline;
-        font-weight: 500;
+        font-weight: 700;
         color: invert($color-700);
         &:hover {
             color: $light;
@@ -652,7 +645,7 @@ footer {
         display: block;
         margin: 0 auto;
         top: 0;
-        background: url('/imgs/galaxy-252885_1280_green.jpg') no-repeat center;
+        background: url('imgs/galaxy-252885_1280_green.jpg') no-repeat center;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

@@ -9,7 +9,7 @@ body {
   overflow: auto; }
 
 *::selection {
-  background-color: #303f9f; }
+  background-color: #e64a19; }
 
 html, body {
   height: 100%;
@@ -17,11 +17,11 @@ html, body {
   max-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #eaecf7;
+  background-color: #fff3ef;
   font-size: 100%; }
 
 p, a, h1, h2, h3 {
-  color: #eaecf7;
+  color: #fff3ef;
   line-height: 1.2;
   font-family: 'Roboto',sans-serif;
   font-weight: 300;
@@ -33,7 +33,7 @@ p, a, h1, h2, h3 {
   text-rendering: optimizeLegibility; }
 
 h1, h2, h3 {
-  color: #eaecf7;
+  color: #fff3ef;
   line-height: 1.2;
   font-family: 'Roboto',sans-serif;
   font-weight: 300;
@@ -49,7 +49,7 @@ h1, h2, h3 {
 
 h1 {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  font-family: 'Source Sans Pro',sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 h2, h3 {
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -59,11 +59,11 @@ p {
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
   p a {
     text-decoration: underline;
-    font-weight: 500;
-    color: #cfc060; }
+    font-weight: 700;
+    color: #19b5e6; }
     p a:hover {
-      color: #eaecf7;
-      background-color: #cfc060; }
+      color: #fff3ef;
+      background-color: #19b5e6; }
 
 .outer {
   margin: 0 auto;
@@ -102,7 +102,7 @@ nav {
   right: 0;
   width: 100%;
   height: 2em;
-  background-color: #eaecf7;
+  background-color: #fff3ef;
   z-index: 5; }
   nav ul {
     display: -webkit-box;
@@ -124,13 +124,13 @@ nav {
       display: inline; }
       nav ul li .nav-item {
         font-size: 1.2em;
-        color: #111754;
+        color: #8f2809;
         display: inline-block;
         padding: 0;
         margin: 0;
         text-transform: uppercase; }
         nav ul li .nav-item:hover {
-          color: #cfc060; }
+          color: #19b5e6; }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
   nav {
@@ -147,7 +147,7 @@ nav {
   width: 100%;
   padding: 0;
   margin: 0 auto;
-  background-color: #3f51b5; }
+  background-color: #ff5722; }
   .home .big-text {
     text-align: center;
     margin: 2% auto;
@@ -286,7 +286,7 @@ nav {
       -ms-animation-backface-visibility: hidden;
       -o-animation-backface-visibility: hidden;
       animation-backface-visibility: hidden;
-      color: #cfc060; }
+      color: #19b5e6; }
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1); }
@@ -352,7 +352,7 @@ nav {
   width: 100%;
   min-height: 100vh;
   padding: 1.5em .5em 1em .5em;
-  background-color: #303f9f; }
+  background-color: #e64a19; }
   .about .about-divider {
     margin: 0 0 0 0;
     padding: 1em 0 3em 0;
@@ -383,12 +383,12 @@ nav {
         flex-grow: 1;
         margin: 0 .75%;
         position: relative;
-        background-color: #3f51b5;
+        background-color: #ff5722;
         transition: 0.2s;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24); }
         .about .about-divider .skills .skill:hover {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          background-color: #cfc060; }
+          background-color: #19b5e6; }
         .about .about-divider .skills .skill h3 {
           position: absolute;
           margin: 0 auto;
@@ -418,7 +418,7 @@ nav {
   min-height: 100vh;
   width: 100%;
   padding: 0;
-  background-color: #3f51b5;
+  background-color: #ff5722;
   padding: 1.5em .5em 1em .5em; }
   .work h1 {
     margin: 1.5em 0 .2em 0; }
@@ -462,12 +462,12 @@ nav {
         .work .gallery .gallery-item a h3 {
           -webkit-align-self: center;
           align-self: center;
-          color: #eaecf7;
+          color: #fff3ef;
           width: 80%;
           padding: 2%;
           margin: 0 auto;
           font-size: 1em;
-          background-color: rgba(63, 81, 181, 0.8); }
+          background-color: rgba(255, 87, 34, 0.8); }
         .work .gallery .gallery-item a p {
           width: 80%;
           padding: 2%;
@@ -475,7 +475,7 @@ nav {
           -webkit-align-self: center;
           align-self: center;
           font-size: 1em;
-          background-color: rgba(63, 81, 181, 0.8); }
+          background-color: rgba(255, 87, 34, 0.8); }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
   .work {
@@ -510,7 +510,7 @@ footer {
   left: 0;
   right: 0;
   height: 2em;
-  background-color: #eaecf7; }
+  background-color: #fff3ef; }
   footer .social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -527,19 +527,19 @@ footer {
     max-height: 100%;
     width: 75%;
     margin: 0 auto;
-    color: #7986cb; }
+    color: #ff8a65; }
     footer .social p {
       float: left;
       margin: 0;
       font-size: 1em;
-      color: #111754; }
+      color: #8f2809; }
       footer .social p:hover {
-        color: #cfc060; }
+        color: #19b5e6; }
     footer .social a {
       font-size: 1.2em;
-      color: #111754; }
+      color: #8f2809; }
       footer .social a:hover {
-        color: #cfc060; }
+        color: #19b5e6; }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
   footer {
@@ -567,7 +567,7 @@ footer {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #303f9f; }
+  background-color: #e64a19; }
   .portfolio_piece .port_header {
     width: 100%;
     height: 300px;
@@ -576,7 +576,7 @@ footer {
     display: block;
     margin: 0 auto;
     top: 0;
-    background: url("/imgs/galaxy-252885_1280_green.jpg") no-repeat center;
+    background: url("imgs/galaxy-252885_1280_green.jpg") no-repeat center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -626,12 +626,12 @@ footer {
         flex-grow: 1;
         margin: 0 .75%;
         position: relative;
-        background-color: #3f51b5;
+        background-color: #ff5722;
         transition: 0.2s;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24); }
         .portfolio_piece .port_content .skills .skill:hover {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          background-color: #cfc060; }
+          background-color: #19b5e6; }
         .portfolio_piece .port_content .skills .skill h3 {
           position: absolute;
           left: 0;
@@ -684,5 +684,3 @@ footer {
       .portfolio_piece .port_content .skills .skill h3 {
         bottom: -35px;
         font-size: 1em; } }
-
-/*# sourceMappingURL=style.css.map */
