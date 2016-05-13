@@ -29,11 +29,11 @@ $delay:  .2s;
 // $color-900: rgba(38, 50, 56, 1);
 
 // TEAL
-// $color-100: rgba(178, 229, 219, 1);
-// $color-300: rgba(77, 182, 172, 1);
-// $color-500: rgba(0, 150, 136, 1);
-// $color-700: rgba(0, 121, 107, 1);
-// $color-900: rgba(0, 77, 64, 1);
+$color-100: rgba(178, 229, 219, 1);
+$color-300: rgba(77, 182, 172, 1);
+$color-500: rgba(0, 150, 136, 1);
+$color-700: rgba(0, 121, 107, 1);
+$color-900: rgba(0, 77, 64, 1);
 
 // Green
 // $color-100: rgba(200, 230, 201, 1);
@@ -64,11 +64,11 @@ $delay:  .2s;
 // $color-900: rgba(191, 54, 12, 1);
 
 // Deep-Purple
-$color-100: rgb(209, 196, 233);
-$color-300: rgb(149, 117, 205);
-$color-500: rgb(103, 58, 183);
-$color-700: rgb(81, 45, 168);
-$color-900: rgb(49, 27, 146);
+// $color-100: rgb(209, 196, 233);
+// $color-300: rgb(149, 117, 205);
+// $color-500: rgb(103, 58, 183);
+// $color-700: rgb(81, 45, 168);
+// $color-900: rgb(49, 27, 146);
 
 // Indigo
 // $color-100: rgb(197, 202, 233);
@@ -82,10 +82,10 @@ $dark: darken($color-900,10%);
 
 $fz-big: 7.5em;
 $fz-bigish: 5em;
-$fz-med: 3em;
-$fz-small: 1.5em;
-$fz-smaller: 1.2em;
-$fz-smallest: 1em;
+$fz-med: 2.8em;
+$fz-small: 1.4em;
+$fz-smaller: 1.1 em;
+$fz-smallest: .8em;
 $fz-tiny: .6em;
 @mixin general_text_style {
     color: $light;
@@ -135,6 +135,11 @@ $fz-tiny: .6em;
             @content;
         }
     }
+    @else if $point == small-height-screen {
+        @media (max-height:400px) {
+            @content;
+        }
+    }
 }
 
 /////////////////////////////////////////////
@@ -169,6 +174,14 @@ h1, h2, h3 {
 h1 {
     text-shadow: 0 0 5px rgba(0,0,0,.3);
     font-family: 'Montserrat', sans-serif;
+}
+@include breakpoint(small-height-screen) {
+    h1 {
+        font-size: 1.6em;
+    }
+    p {
+        font-size: $fz-smallest;
+    }
 }
 h2, h3 {
     text-shadow: 2px 2px 10px rgba(0,0,0,.1);
@@ -250,6 +263,18 @@ nav {
         }
     }
 }
+@include breakpoint(small-height-screen) {
+    nav {
+        height: 1.5em;
+        ul {
+            li {
+                .nav-item {
+                    font-size: $fz-smallest;
+                }
+            }
+        }
+    }
+}
 @include breakpoint(medium-screen) {
     nav {
         height: 2.5em;
@@ -308,6 +333,23 @@ nav {
             @include pulse();
             color: invert($color-700);
         }
+    }
+}
+@include breakpoint(small-height-screen) {
+    .home {
+        .big-text {
+            font-size: 1.6em;
+            letter-spacing: .3em;
+            font-weight: 700;
+            line-height: .9;
+        }
+        .med-text {
+            font-size: .75em;
+            letter-spacing: .5em;
+        }
+    }
+    #arrow {
+        font-size: 1.2em !important;
     }
 }
 @include breakpoint(medium-screen) {
@@ -415,6 +457,24 @@ nav {
         }
     }
 }
+@include breakpoint(small-height-screen) {
+    .about {
+        .about-divider {
+            margin: .4em 0 0 0;
+            padding:.3em 0 2em 0;
+            .skills {
+                height: 3em;
+                margin-bottom:.5%;
+                .skill {
+                    h3 {
+                        bottom:-20px;
+                        font-size:  $fz-smallest;
+                    }
+                }
+            }
+        }
+    }
+}
 @include breakpoint(medium-screen){
     .about {
         .about-divider {
@@ -460,7 +520,7 @@ nav {
     background-color: $color-500;
     padding:1.5em .5em 1em .5em;
     h1 {
-        margin: 1.5em 0 .2em 0;
+        margin: 0 0 .2em 0;
     }
     .gallery {
         width: 90%;
@@ -597,6 +657,21 @@ footer {
             }
         }
     }
+}
+@include breakpoint(small-height-screen) {
+    footer {
+         height: 1.6em;
+         .social {
+             width: 75%;
+             max-width:25em;
+             p {
+                 font-size: .7em;
+             }
+             a {
+                 font-size: .8em;
+             }
+         }
+     }
 }
 @include breakpoint(medium-screen){
    footer {
