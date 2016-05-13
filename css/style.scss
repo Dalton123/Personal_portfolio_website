@@ -57,18 +57,18 @@ $delay:  .2s;
 // $color-900: rgba(183, 28, 28, 1);
 
 // DEEP ORANGE
-$color-100: rgba(255, 204, 188, 1);
-$color-300: rgba(255, 138, 101, 1);
-$color-500: rgba(255, 87, 34, 1);
-$color-700: rgba(230, 74, 25, 1);
-$color-900: rgba(191, 54, 12, 1);
+// $color-100: rgba(255, 204, 188, 1);
+// $color-300: rgba(255, 138, 101, 1);
+// $color-500: rgba(255, 87, 34, 1);
+// $color-700: rgba(230, 74, 25, 1);
+// $color-900: rgba(191, 54, 12, 1);
 
 // Deep-Purple
-// $color-100: rgb(209, 196, 233);
-// $color-300: rgb(149, 117, 205);
-// $color-500: rgb(103, 58, 183);
-// $color-700: rgb(81, 45, 168);
-// $color-900: rgb(49, 27, 146);
+$color-100: rgb(209, 196, 233);
+$color-300: rgb(149, 117, 205);
+$color-500: rgb(103, 58, 183);
+$color-700: rgb(81, 45, 168);
+$color-900: rgb(49, 27, 146);
 
 // Indigo
 // $color-100: rgb(197, 202, 233);
@@ -365,9 +365,12 @@ nav {
     padding: 1.5em .5em 1em .5em;
     background-color: $color-700;
     .about-divider {
-        margin: 0 0 0 0;
-        padding:1em 0 3em 0;
+        margin: 1.5em 0 0 0;
+        padding:.5em 0 3em 0;
         width:95%;
+        &:nth-of-type(even){
+            background-color: lighten($color-700,3%);
+        }
         p {
             margin:1em auto;
             width:90%;
@@ -392,14 +395,10 @@ nav {
                 position: relative;
                 background-color: $color-500;
                 transition: $delay;
-                box-shadow:
-                0 1px 1px rgba(0,0,0,0.12),
-                0 1px 1px rgba(0,0,0,0.24);
-                &:hover{
-                box-shadow:
-                0 1px 3px rgba(0,0,0,0.12),
-                0 1px 2px rgba(0,0,0,0.24);
-                background-color: invert($color-700);
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                &:hover {
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                    background-color: invert($color-700);
                 }
                 h3 {
                     position: absolute;
@@ -435,6 +434,8 @@ nav {
 @include breakpoint(big-screen){
     .about {
         .about-divider {
+            margin: 1.6em 0 1em 0;
+            padding:.5em 0 3em 0;
             .skills {
                 height: 15em;
                 margin-bottom:2%;
@@ -499,7 +500,7 @@ nav {
                     padding: 2%;
                     margin: 0 auto;
                     font-size: $fz-smallest;
-                    background-color: transparentize($color-500,.2);
+                    background-color: transparentize($color-500,.075);
                 }
                 p {
                     width: 80%;
@@ -508,7 +509,7 @@ nav {
                     -webkit-align-self: center;
                     align-self: center;
                     font-size: $fz-smallest;
-                    background-color: transparentize($color-500,.2);
+                    background-color: transparentize($color-500,.075);
                 }
             }
         }
@@ -651,8 +652,6 @@ footer {
         background-size: cover;
         position: relative;
         @include flex-box;
-        &:hover {
-        }
         a {
             margin: 0 auto;
             -webkit-align-items: center;
@@ -695,9 +694,9 @@ footer {
                 position: relative;
                 background-color: $color-500;
                 transition: $delay;
-                box-shadow: 0 1px 1px rgba(0,0,0,0.12),0 1px 1px rgba(0,0,0,0.24);
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                 &:hover {
-                    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
                     background-color: invert($color-700);
                 }
                 h3 {
