@@ -4,82 +4,69 @@
 /////////////       Exends    ///////////////
 ////////////////////////////////////////////
 @import "animate.scss";
-
-$delay:  .2s;
-
+$delay: .2s;
 // Light-Blue
 // $color-100: rgba(179, 229, 252, 1);
 // $color-300: rgba(79, 195, 247, 1);
 // $color-500: rgba(3, 169, 244, 1);
 // $color-700: rgba(2, 136, 209, 1);
 // $color-900: rgba(1, 87, 155, 1);
-
 // Blue
 // $color-100: rgba(187, 222, 251, 1);
 // $color-300: rgba(100, 181, 246, 1);
 // $color-500: rgba(33, 150, 243, 1);
 // $color-700: rgba(25, 118, 210, 1);
 // $color-900: rgba(13, 71, 161, 1);
-
 // Blue-Grey
 // $color-100: rgba(207, 216, 220, 1);
 // $color-300: rgba(144, 164, 174, 1);
 // $color-500: rgba(96, 125, 139, 1);
 // $color-700: rgba(69, 90, 100, 1);
 // $color-900: rgba(38, 50, 56, 1);
-
 // TEAL
 $color-100: rgba(178, 229, 219, 1);
 $color-300: rgba(77, 182, 172, 1);
 $color-500: rgba(0, 150, 136, 1);
 $color-700: rgba(0, 121, 107, 1);
 $color-900: rgba(0, 77, 64, 1);
-
 // Green
 // $color-100: rgba(200, 230, 201, 1);
 // $color-300: rgba(129, 199, 132, 1);
 // $color-500: rgba(76, 175, 80, 1);
 // $color-700: rgba(56, 142, 60, 1);
 // $color-900: rgba(27, 94, 32, 1);
-
 // Light-Green
 // $color-100: rgba(220, 237, 200, 1);
 // $color-300: rgba(174, 213, 129, 1);
 // $color-500: rgba(139, 195, 74, 1);
 // $color-700: rgba(104, 159, 56, 1);
 // $color-900: rgba(51, 105, 30, 1);
-
 // RED
 // $color-100: rgba(255, 205, 210, 1);
 // $color-300: rgba(229, 115, 115, 1);
 // $color-500: rgba(244, 67, 54, 1);
 // $color-700: rgba(211, 47, 47, 1);
 // $color-900: rgba(183, 28, 28, 1);
-
 // DEEP ORANGE
 // $color-100: rgba(255, 204, 188, 1);
 // $color-300: rgba(255, 138, 101, 1);
 // $color-500: rgba(255, 87, 34, 1);
 // $color-700: rgba(230, 74, 25, 1);
 // $color-900: rgba(191, 54, 12, 1);
-
 // Deep-Purple
 // $color-100: rgb(209, 196, 233);
 // $color-300: rgb(149, 117, 205);
 // $color-500: rgb(103, 58, 183);
 // $color-700: rgb(81, 45, 168);
 // $color-900: rgb(49, 27, 146);
-
 // Indigo
 // $color-100: rgb(197, 202, 233);
 // $color-300: rgb(121, 134, 203);
 // $color-500: rgb(63, 81, 181);
 // $color-700: rgb(48, 63, 159);
 // $color-900: rgb(26, 35, 126);
-
-$light: lighten($color-100,10%);
-$dark: darken($color-900,10%);
-
+$light: lighten($color-100, 10%);
+$dark: darken($color-900, 10%);
 $fz-big: 7.5em;
 $fz-bigish: 5em;
 $fz-med: 2.8em;
@@ -90,7 +77,7 @@ $fz-tiny: .6em;
 @mixin general_text_style {
     color: $light;
     line-height: 1.2;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     letter-spacing: .05em;
     transition: $delay;
@@ -99,17 +86,19 @@ $fz-tiny: .6em;
     text-shadow: 0 0 1px transparent;
     text-rendering: optimizeLegibility;
 }
+
 @mixin height($height) {
     height: $height;
     min-height: $height;
     max-height: $height;
 }
+
 @mixin flex-box {
-    display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
 }
+
 @mixin skills {
     position: absolute;
     bottom: -2em;
@@ -117,26 +106,28 @@ $fz-tiny: .6em;
     right: 0;
     color: $light;
     -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
     align-self: flex-end;
 }
+
 @mixin breakpoint($point) {
-    @if $point == big-screen {
-        @media (min-width:1250px) {
+    @if $point==big-screen {
+        @media (min-width: 1250px) {
             @content;
         }
     }
-    @else if $point == medium-screen {
-        @media screen and (min-width:480px) and (max-width:1250px) {
+    @else if $point==medium-screen {
+        @media screen and (min-width: 480px) and (max-width: 1250px) {
             @content;
         }
     }
-    @else if $point == small-med-screen {
-        @media screen and (min-width:480px) and (max-width:750px) {
+    @else if $point==small-med-screen {
+        @media screen and (min-width: 480px) and (max-width: 750px) {
             @content;
         }
     }
-    @else if $point == small-height-screen {
-        @media (max-height:400px) {
+    @else if $point==small-height-screen {
+        @media (max-height: 400px) {
             @content;
         }
     }
@@ -149,32 +140,50 @@ $fz-tiny: .6em;
     box-sizing: border-box;
     transition: $delay;
 }
+
 .clearfix {
     overflow: auto;
 }
+
+*::-moz-selection {
+    background-color: $color-700;
+}
+
 *::selection {
     background-color: $color-700;
 }
-html, body {
+
+html,
+body {
     @include height(100%);
     margin: 0;
     padding: 0;
     background-color: $light;
     font-size: 100%;
 }
-p, a, h1, h2, h3 {
+
+p,
+a,
+h1,
+h2,
+h3 {
     @include general_text_style;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     @include general_text_style;
     text-transform: uppercase;
     margin: 1%;
     padding: 0;
 }
+
 h1 {
-    text-shadow: 0 0 5px rgba(0,0,0,.3);
+    text-shadow: 0 0 5px rgba(0, 0, 0, .3);
     font-family: 'Montserrat', sans-serif;
 }
+
 @include breakpoint(small-height-screen) {
     h1 {
         font-size: 1.6em;
@@ -183,12 +192,15 @@ h1 {
         font-size: $fz-smallest;
     }
 }
-h2, h3 {
-    text-shadow: 2px 2px 10px rgba(0,0,0,.1);
+
+h2,
+h3 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
     font-style: italic;
 }
+
 p {
-    text-shadow: 2px 2px 10px rgba(0,0,0,.3);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
     a {
         text-decoration: underline;
         font-weight: 700;
@@ -199,6 +211,7 @@ p {
         }
     }
 }
+
 .outer {
     margin: 0 auto;
     width: calc(100% - 3em);
@@ -210,20 +223,26 @@ p {
         width: calc(100% - 7em);
     }
 }
+
 .vertical-center {
     @include flex-box;
     -webkit-align-self: center;
+    -ms-flex-item-align: center;
     align-self: center;
     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     width: 100%;
     min-height: 100vh;
 }
+
 ////////////////////////////////////////////
 //////////////  Navigation  ///////////////
 //////////////////////////////////////////
@@ -239,10 +258,14 @@ nav {
     ul {
         @include flex-box;
         -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         -webkit-align-self: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
         @include height(100%);
         max-width: 90%;
@@ -263,6 +286,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(small-height-screen) {
     nav {
         height: 1.5em;
@@ -275,6 +299,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(medium-screen) {
     nav {
         height: 2.5em;
@@ -287,6 +312,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(big-screen) {
     nav {
         height: 3em;
@@ -299,6 +325,7 @@ nav {
         }
     }
 }
+
 ////////////////////////////////////////////
 /////////////////  Home  //////////////////
 //////////////////////////////////////////
@@ -306,7 +333,7 @@ nav {
     min-height: 100vh;
     width: 100%;
     padding: 0;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: $color-500;
     .big-text {
         text-align: center;
@@ -335,6 +362,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(small-height-screen) {
     .home {
         .big-text {
@@ -352,6 +380,7 @@ nav {
         font-size: 1.2em !important;
     }
 }
+
 @include breakpoint(medium-screen) {
     .home {
         .big-text {
@@ -366,6 +395,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(small-med-screen) {
     .home {
         .big-text {
@@ -380,6 +410,7 @@ nav {
         }
     }
 }
+
 @include breakpoint(big-screen) {
     .home {
         .big-text {
@@ -398,6 +429,7 @@ nav {
         }
     }
 }
+
 ////////////////////////////////////////////
 /////////////////  About  /////////////////
 //////////////////////////////////////////
@@ -408,101 +440,109 @@ nav {
     background-color: $color-700;
     .about-divider {
         margin: 1.5em 0 0 0;
-        padding:.5em 0 3em 0;
-        width:95%;
-        &:nth-of-type(even){
-            background-color: lighten($color-700,3%);
+        padding: .5em 0 3em 0;
+        width: 95%;
+        &:nth-of-type(even) {
+            background-color: lighten($color-700, 3%);
         }
         p {
-            margin:1em auto;
-            width:90%;
+            margin: 1em auto;
+            width: 90%;
         }
         h3 {
-            margin:1em auto;
-            width:90%;
+            margin: 1em auto;
+            width: 90%;
         }
         .skills {
             @include flex-box;
             -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
             justify-content: space-between;
             width: 95%;
             height: 8em;
-            margin:0 auto;
+            margin: 0 auto;
             -webkit-align-items: flex-end;
+            -ms-flex-align: end;
             align-items: flex-end;
             .skill {
                 @include flex-box;
-                flex-grow:1;
+                -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
                 margin: 0 .75%;
                 position: relative;
                 background-color: $color-500;
                 transition: $delay;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
                 &:hover {
-                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
                     background-color: invert($color-700);
                 }
                 h3 {
                     position: absolute;
                     margin: 0 auto;
-                    left:0;
-                    right:0;
-                    bottom:-25px;
-                    text-align:center;
+                    left: 0;
+                    right: 0;
+                    bottom: -25px;
+                    text-align: center;
                     -webkit-align-self: flex-end;
+                    -ms-flex-item-align: end;
                     align-self: flex-end;
-                    font-size:  $fz-tiny;
+                    font-size: $fz-tiny;
                 }
             }
         }
     }
 }
+
 @include breakpoint(small-height-screen) {
     .about {
         .about-divider {
             margin: .4em 0 0 0;
-            padding:.3em 0 2em 0;
+            padding: .3em 0 2em 0;
             .skills {
                 height: 3em;
-                margin-bottom:.5%;
+                margin-bottom: .5%;
                 .skill {
                     h3 {
-                        bottom:-20px;
-                        font-size:  $fz-smallest;
+                        bottom: -20px;
+                        font-size: $fz-smallest;
                     }
                 }
             }
         }
     }
 }
-@include breakpoint(medium-screen){
+
+@include breakpoint(medium-screen) {
     .about {
         .about-divider {
             .skills {
                 height: 10em;
-                margin-bottom:2%;
+                margin-bottom: 2%;
                 .skill {
                     h3 {
-                        bottom:-35px;
-                        font-size:  $fz-smallest;
+                        bottom: -35px;
+                        font-size: $fz-smallest;
                     }
                 }
             }
         }
     }
 }
-@include breakpoint(big-screen){
+
+@include breakpoint(big-screen) {
     .about {
         .about-divider {
             margin: 1.6em 0 1em 0;
-            padding:.5em 0 3em 0;
+            padding: .5em 0 3em 0;
             .skills {
                 height: 15em;
-                margin-bottom:2%;
+                margin-bottom: 2%;
                 .skill {
                     h3 {
-                        bottom:-40px;
-                        font-size:  $fz-smallest;
+                        bottom: -40px;
+                        font-size: $fz-smallest;
                     }
                 }
             }
@@ -518,7 +558,7 @@ nav {
     width: 100%;
     padding: 0;
     background-color: $color-500;
-    padding:1.5em .5em 1em .5em;
+    padding: 1.5em .5em 1em .5em;
     h1 {
         margin: 0 0 .2em 0;
     }
@@ -529,8 +569,10 @@ nav {
         list-style: none;
         @include flex-box;
         -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
         -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         .gallery-item {
             width: 100%;
@@ -539,51 +581,57 @@ nav {
             margin: .5em 1%;
             position: relative;
             img {
-                width:100%;
-                border-radius:2%;
+                width: 100%;
+                border-radius: 2%;
             }
             a {
                 position: absolute;
                 width: 100%;
                 @include height(100%);
                 @include flex-box;
-                border-radius:2%;
-                overflow:hidden;
+                border-radius: 2%;
+                overflow: hidden;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
                 justify-content: center;
                 -webkit-flex-flow: column wrap;
+                -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
                 h3 {
                     -webkit-align-self: center;
+                    -ms-flex-item-align: center;
                     align-self: center;
                     color: $light;
                     width: 80%;
                     padding: 2%;
                     margin: 0 auto;
                     font-size: $fz-smallest;
-                    background-color: transparentize($color-500,.075);
+                    background-color: transparentize($color-500, .075);
                 }
                 p {
                     width: 80%;
                     padding: 2%;
-                    margin:0;
+                    margin: 0;
                     -webkit-align-self: center;
+                    -ms-flex-item-align: center;
                     align-self: center;
                     font-size: $fz-smallest;
-                    background-color: transparentize($color-500,.075);
+                    background-color: transparentize($color-500, .075);
                 }
             }
         }
     }
 }
+
 @include breakpoint(medium-screen) {
     .work {
-        padding:0 .5em 1em .5em;
+        padding: 0 .5em 1em .5em;
         .gallery {
             width: 100%;
             .gallery-item {
                 width: 100%;
                 max-width: 32%;
-                min-width:380px;
+                min-width: 380px;
                 margin: 1em 1%;
                 a {
                     h3 {
@@ -597,9 +645,10 @@ nav {
         }
     }
 }
+
 @include breakpoint(big-screen) {
     .work {
-        padding:0 .5em 1em .5em;
+        padding: 0 .5em 1em .5em;
         .gallery {
             width: 100%;
             .gallery-item {
@@ -618,6 +667,7 @@ nav {
         }
     }
 }
+
 ////////////////////////////////////////////
 ////////////////  Footer  /////////////////
 //////////////////////////////////////////
@@ -631,10 +681,13 @@ footer {
     .social {
         @include flex-box;
         -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
         @include height(100%);
         width: 75%;
@@ -658,27 +711,29 @@ footer {
         }
     }
 }
+
 @include breakpoint(small-height-screen) {
     footer {
-         height: 1.6em;
-         .social {
-             width: 75%;
-             max-width:25em;
-             p {
-                 font-size: .7em;
-             }
-             a {
-                 font-size: .8em;
-             }
-         }
-     }
+        height: 1.6em;
+        .social {
+            width: 75%;
+            max-width: 25em;
+            p {
+                font-size: .7em;
+            }
+            a {
+                font-size: .8em;
+            }
+        }
+    }
 }
-@include breakpoint(medium-screen){
-   footer {
+
+@include breakpoint(medium-screen) {
+    footer {
         height: 2.7em;
         .social {
             width: 75%;
-            max-width:25em;
+            max-width: 25em;
             p {
                 font-size: $fz-smaller;
             }
@@ -688,12 +743,13 @@ footer {
         }
     }
 }
+
 @include breakpoint(big-screen) {
     footer {
         height: 3em;
         .social {
             width: 30%;
-            max-width:30em;
+            max-width: 30em;
             p {
                 margin: 0;
                 font-size: $fz-smaller;
@@ -704,6 +760,7 @@ footer {
         }
     }
 }
+
 ////////////////////////////////////////////
 ////////////  Portfolio Piece  ////////////
 //////////////////////////////////////////
@@ -731,12 +788,17 @@ footer {
             margin: 0 auto;
             -webkit-align-items: center;
             -webkit-align-self: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
             align-self: center;
             h1 {
-                text-shadow: 10px 10px 30px rgba(0,0,0,1);
+                text-shadow: 10px 10px 30px rgba(0, 0, 0, 1);
                 font-size: $fz-small;
                 -webkit-align-items: center;
+                -ms-flex-align: center;
                 align-items: center;
             }
         }
@@ -756,22 +818,26 @@ footer {
         .skills {
             @include flex-box;
             -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
             justify-content: space-between;
             width: 95%;
             height: 8em;
             margin: 0 auto;
             -webkit-align-items: flex-end;
+            -ms-flex-align: end;
             align-items: flex-end;
             .skill {
                 @include flex-box;
+                -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
                 flex-grow: 1;
                 margin: 0 .75%;
                 position: relative;
                 background-color: $color-500;
                 transition: $delay;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
                 &:hover {
-                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
                     background-color: invert($color-700);
                 }
                 h3 {
@@ -781,6 +847,7 @@ footer {
                     bottom: -25px;
                     text-align: center;
                     -webkit-align-self: flex-end;
+                    -ms-flex-item-align: end;
                     align-self: flex-end;
                     font-size: $fz-tiny;
                 }
@@ -788,6 +855,7 @@ footer {
         }
     }
 }
+
 @include breakpoint(medium-screen) {
     .portfolio_piece {
         .port_header {
@@ -823,6 +891,7 @@ footer {
         }
     }
 }
+
 @include breakpoint(big-screen) {
     .portfolio_piece {
         .port_header {
