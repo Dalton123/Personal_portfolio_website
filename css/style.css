@@ -467,7 +467,7 @@ nav {
     margin: 1.6em 0 1em 0;
     padding: .5em 0 3em 0; }
     .about .about-divider .skills {
-      height: 15em;
+      height: 12.5em;
       margin-bottom: 2%; }
       .about .about-divider .skills .skill h3 {
         bottom: -40px;
@@ -660,6 +660,7 @@ footer {
     display: -webkit-flex;
     display: flex; }
     .portfolio_piece .port_header a {
+      width: 100%;
       margin: 0 auto;
       -webkit-align-items: center;
       -webkit-align-self: center;
@@ -693,7 +694,7 @@ footer {
       -ms-flex-pack: justify;
       justify-content: space-between;
       width: 95%;
-      height: 8em;
+      height: 5em;
       margin: 0 auto;
       -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -758,11 +759,11 @@ footer {
       margin: 2% auto 2% auto;
       font-size: 2.8em; }
     .portfolio_piece .port_content p {
-      margin: 2% auto 2% auto;
+      margin: 2.5% auto 2% auto;
       font-size: 1.1 em; }
     .portfolio_piece .port_content .skills {
-      height: 15em;
+      height: 10em;
       margin-bottom: 2%; }
       .portfolio_piece .port_content .skills .skill h3 {
-        bottom: -35px;
+        bottom: -30px;
         font-size: 0.8em; } }

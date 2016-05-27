@@ -537,7 +537,7 @@ nav {
             margin: 1.6em 0 1em 0;
             padding: .5em 0 3em 0;
             .skills {
-                height: 15em;
+                height: 12.5em;
                 margin-bottom: 2%;
                 .skill {
                     h3 {
@@ -785,6 +785,7 @@ footer {
         position: relative;
         @include flex-box;
         a {
+            width: 100%;
             margin: 0 auto;
             -webkit-align-items: center;
             -webkit-align-self: center;
@@ -821,7 +822,7 @@ footer {
             -ms-flex-pack: justify;
             justify-content: space-between;
             width: 95%;
-            height: 8em;
+            height: 5em;
             margin: 0 auto;
             -webkit-align-items: flex-end;
             -ms-flex-align: end;
@@ -911,15 +912,15 @@ footer {
                 font-size: $fz-med;
             }
             p {
-                margin: 2% auto 2% auto;
+                margin: 2.5% auto 2% auto;
                 font-size: $fz-smaller;
             }
             .skills {
-                height: 15em;
+                height: 10em;
                 margin-bottom: 2%;
                 .skill {
                     h3 {
-                        bottom: -35px;
+                        bottom: -30px;
                         font-size: $fz-smallest;
                     }
                 }
