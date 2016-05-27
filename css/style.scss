@@ -24,11 +24,11 @@ $delay: .2s;
 // $color-700: rgba(69, 90, 100, 1);
 // $color-900: rgba(38, 50, 56, 1);
 // TEAL
-$color-100: rgba(178, 229, 219, 1);
-$color-300: rgba(77, 182, 172, 1);
-$color-500: rgba(0, 150, 136, 1);
-$color-700: rgba(0, 121, 107, 1);
-$color-900: rgba(0, 77, 64, 1);
+// $color-100: rgba(178, 229, 219, 1);
+// $color-300: rgba(77, 182, 172, 1);
+// $color-500: rgba(0, 150, 136, 1);
+// $color-700: rgba(0, 121, 107, 1);
+// $color-900: rgba(0, 77, 64, 1);
 // Green
 // $color-100: rgba(200, 230, 201, 1);
 // $color-300: rgba(129, 199, 132, 1);
@@ -60,11 +60,11 @@ $color-900: rgba(0, 77, 64, 1);
 // $color-700: rgb(81, 45, 168);
 // $color-900: rgb(49, 27, 146);
 // Indigo
-// $color-100: rgb(197, 202, 233);
-// $color-300: rgb(121, 134, 203);
-// $color-500: rgb(63, 81, 181);
-// $color-700: rgb(48, 63, 159);
-// $color-900: rgb(26, 35, 126);
+$color-100: rgb(197, 202, 233);
+$color-300: rgb(121, 134, 203);
+$color-500: rgb(63, 81, 181);
+$color-700: rgb(48, 63, 159);
+$color-900: rgb(26, 35, 126);
 $light: lighten($color-100, 10%);
 $dark: darken($color-900, 10%);
 $fz-big: 7.5em;
@@ -597,20 +597,25 @@ nav {
                 -webkit-flex-flow: column wrap;
                 -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
+                &:hover {
+                    p,h3 {
+                    background-color: invert($color-700);
+                    }
+                }
                 h3 {
                     -webkit-align-self: center;
                     -ms-flex-item-align: center;
                     align-self: center;
                     color: $light;
                     width: 80%;
-                    padding: 2%;
+                    padding: 10% 2% 2%;
                     margin: 0 auto;
                     font-size: $fz-smallest;
                     background-color: transparentize($color-500, .075);
                 }
                 p {
                     width: 80%;
-                    padding: 2%;
+                    padding: 2% 2% 10%;
                     margin: 0;
                     -webkit-align-self: center;
                     -ms-flex-item-align: center;

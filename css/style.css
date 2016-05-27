@@ -9,10 +9,10 @@ body {
   overflow: auto; }
 
 *::-moz-selection {
-  background-color: #00796b; }
+  background-color: #303f9f; }
 
 *::selection {
-  background-color: #00796b; }
+  background-color: #303f9f; }
 
 html,
 body {
@@ -21,7 +21,7 @@ body {
   max-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #d8f2ed;
+  background-color: #eaecf7;
   font-size: 100%; }
 
 p,
@@ -29,7 +29,7 @@ a,
 h1,
 h2,
 h3 {
-  color: #d8f2ed;
+  color: #eaecf7;
   line-height: 1.2;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -43,7 +43,7 @@ h3 {
 h1,
 h2,
 h3 {
-  color: #d8f2ed;
+  color: #eaecf7;
   line-height: 1.2;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -77,10 +77,10 @@ p {
   p a {
     text-decoration: underline;
     font-weight: 700;
-    color: #ff8694; }
+    color: #cfc060; }
     p a:hover {
-      color: #d8f2ed;
-      background-color: #ff8694; }
+      color: #eaecf7;
+      background-color: #cfc060; }
 
 .outer {
   margin: 0 auto;
@@ -122,7 +122,7 @@ nav {
   right: 0;
   width: 100%;
   height: 2em;
-  background-color: #d8f2ed;
+  background-color: #eaecf7;
   z-index: 5; }
   nav ul {
     display: -ms-flexbox;
@@ -147,13 +147,13 @@ nav {
       display: inline; }
       nav ul li .nav-item {
         font-size: 1.1 em;
-        color: #001a16;
+        color: #111754;
         display: inline-block;
         padding: 0;
         margin: 0;
         text-transform: uppercase; }
         nav ul li .nav-item:hover {
-          color: #ff8694; }
+          color: #cfc060; }
 
 @media (max-height: 400px) {
   nav {
@@ -175,7 +175,7 @@ nav {
   width: 100%;
   padding: 0;
   margin: 0 auto;
-  background-color: #009688; }
+  background-color: #3f51b5; }
   .home .big-text {
     text-align: center;
     margin: 2% auto;
@@ -314,7 +314,7 @@ nav {
       -ms-animation-backface-visibility: hidden;
       -o-animation-backface-visibility: hidden;
       animation-backface-visibility: hidden;
-      color: #ff8694; }
+      color: #cfc060; }
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1); }
@@ -392,13 +392,13 @@ nav {
   width: 100%;
   min-height: 100vh;
   padding: 1.5em .5em 1em .5em;
-  background-color: #00796b; }
+  background-color: #303f9f; }
   .about .about-divider {
     margin: 1.5em 0 0 0;
     padding: .5em 0 3em 0;
     width: 95%; }
     .about .about-divider:nth-of-type(even) {
-      background-color: #008879; }
+      background-color: #3444ab; }
     .about .about-divider p {
       margin: 1em auto;
       width: 90%; }
@@ -427,12 +427,12 @@ nav {
         flex-grow: 1;
         margin: 0 .75%;
         position: relative;
-        background-color: #009688;
+        background-color: #3f51b5;
         transition: 0.2s;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
         .about .about-divider .skills .skill:hover {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          background-color: #ff8694; }
+          background-color: #cfc060; }
         .about .about-divider .skills .skill h3 {
           position: absolute;
           margin: 0 auto;
@@ -476,7 +476,7 @@ nav {
   min-height: 100vh;
   width: 100%;
   padding: 0;
-  background-color: #009688;
+  background-color: #3f51b5;
   padding: 1.5em .5em 1em .5em; }
   .work h1 {
     margin: 0 0 .2em 0; }
@@ -520,25 +520,27 @@ nav {
         -webkit-flex-flow: column wrap;
         -ms-flex-flow: column wrap;
         flex-flow: column wrap; }
+        .work .gallery .gallery-item a:hover p, .work .gallery .gallery-item a:hover h3 {
+          background-color: #cfc060; }
         .work .gallery .gallery-item a h3 {
           -webkit-align-self: center;
           -ms-flex-item-align: center;
           align-self: center;
-          color: #d8f2ed;
+          color: #eaecf7;
           width: 80%;
-          padding: 2%;
+          padding: 10% 2% 2%;
           margin: 0 auto;
           font-size: 0.8em;
-          background-color: rgba(0, 150, 136, 0.925); }
+          background-color: rgba(63, 81, 181, 0.925); }
         .work .gallery .gallery-item a p {
           width: 80%;
-          padding: 2%;
+          padding: 2% 2% 10%;
           margin: 0;
           -webkit-align-self: center;
           -ms-flex-item-align: center;
           align-self: center;
           font-size: 0.8em;
-          background-color: rgba(0, 150, 136, 0.925); }
+          background-color: rgba(63, 81, 181, 0.925); }
 
 @media screen and (min-width: 480px) and (max-width: 1250px) {
   .work {
@@ -573,7 +575,7 @@ footer {
   left: 0;
   right: 0;
   height: 2em;
-  background-color: #d8f2ed; }
+  background-color: #eaecf7; }
   footer .social {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -592,19 +594,19 @@ footer {
     max-height: 100%;
     width: 75%;
     margin: 0 auto;
-    color: #4db6ac; }
+    color: #7986cb; }
     footer .social p {
       float: left;
       margin: 0;
       font-size: 0.8em;
-      color: #001a16; }
+      color: #111754; }
       footer .social p:hover {
-        color: #ff8694; }
+        color: #cfc060; }
     footer .social a {
       font-size: 1.1 em;
-      color: #001a16; }
+      color: #111754; }
       footer .social a:hover {
-        color: #ff8694; }
+        color: #cfc060; }
 
 @media (max-height: 400px) {
   footer {
@@ -642,7 +644,7 @@ footer {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #00796b; }
+  background-color: #303f9f; }
   .portfolio_piece .port_header {
     width: 100%;
     height: 300px;
@@ -708,12 +710,12 @@ footer {
         flex-grow: 1;
         margin: 0 .75%;
         position: relative;
-        background-color: #009688;
+        background-color: #3f51b5;
         transition: 0.2s;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
         .portfolio_piece .port_content .skills .skill:hover {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          background-color: #ff8694; }
+          background-color: #cfc060; }
         .portfolio_piece .port_content .skills .skill h3 {
           position: absolute;
           left: 0;
