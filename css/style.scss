@@ -24,11 +24,11 @@ $delay: .2s;
 // $color-700: rgba(69, 90, 100, 1);
 // $color-900: rgba(38, 50, 56, 1);
 // TEAL
-// $color-100: rgba(178, 229, 219, 1);
-// $color-300: rgba(77, 182, 172, 1);
-// $color-500: rgba(0, 150, 136, 1);
-// $color-700: rgba(0, 121, 107, 1);
-// $color-900: rgba(0, 77, 64, 1);
+$color-100: rgba(178, 229, 219, 1);
+$color-300: rgba(77, 182, 172, 1);
+$color-500: rgba(0, 150, 136, 1);
+$color-700: rgba(0, 121, 107, 1);
+$color-900: rgba(0, 77, 64, 1);
 // Green
 // $color-100: rgba(200, 230, 201, 1);
 // $color-300: rgba(129, 199, 132, 1);
@@ -60,11 +60,11 @@ $delay: .2s;
 // $color-700: rgb(81, 45, 168);
 // $color-900: rgb(49, 27, 146);
 // Indigo
-$color-100: rgb(197, 202, 233);
-$color-300: rgb(121, 134, 203);
-$color-500: rgb(63, 81, 181);
-$color-700: rgb(48, 63, 159);
-$color-900: rgb(26, 35, 126);
+// $color-100: rgb(197, 202, 233);
+// $color-300: rgb(121, 134, 203);
+// $color-500: rgb(63, 81, 181);
+// $color-700: rgb(48, 63, 159);
+// $color-900: rgb(26, 35, 126);
 $light: lighten($color-100, 10%);
 $dark: darken($color-900, 10%);
 $fz-big: 7.5em;
@@ -105,9 +105,9 @@ $fz-tiny: .6em;
     left: 0;
     right: 0;
     color: $light;
-    -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
-    align-self: flex-end;
+    -webkit-align-self: flex-end;
+            align-self: flex-end;
 }
 
 @mixin breakpoint($point) {
@@ -128,6 +128,11 @@ $fz-tiny: .6em;
     }
     @else if $point==small-height-screen {
         @media (max-height: 400px) {
+            @content;
+        }
+    }
+    @else if $point==medium-height-screen {
+        @media (max-height: 900px) {
             @content;
         }
     }
@@ -226,9 +231,9 @@ p {
 
 .vertical-center {
     @include flex-box;
-    -webkit-align-self: center;
     -ms-flex-item-align: center;
-    align-self: center;
+    -webkit-align-self: center;
+            align-self: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -343,6 +348,9 @@ nav {
         font-weight: 700;
         line-height: .9;
         text-transform: uppercase;
+        @include fadeIn();
+        -webkit-animation-delay:.5s;
+                animation-delay:.5s;
     }
     .med-text {
         text-align: center;
@@ -352,12 +360,16 @@ nav {
         letter-spacing: .5em;
         font-weight: 100;
         line-height: 1;
+        @include fadeIn();
+        -webkit-animation-delay:1s;
+                animation-delay:1s;
     }
     #arrow {
         font-size: $fz-med;
-        @include wiggle();
+        @include fadeIn();
+        -webkit-animation-delay:1.5s;
+                animation-delay:1.5s;
         &:hover {
-            @include pulse();
             color: invert($color-700);
         }
     }
@@ -414,13 +426,13 @@ nav {
 @include breakpoint(big-screen) {
     .home {
         .big-text {
-            font-size: $fz-bigish;
+            font-size: $fz-big;
             letter-spacing: .5em;
             font-weight: 900;
             line-height: .8;
         }
         .med-text {
-            font-size: $fz-med;
+            font-size: $fz-bigish;
             letter-spacing: .6em;
             line-height: 1;
         }
@@ -485,9 +497,9 @@ nav {
                     right: 0;
                     bottom: -25px;
                     text-align: center;
-                    -webkit-align-self: flex-end;
                     -ms-flex-item-align: end;
-                    align-self: flex-end;
+                    -webkit-align-self: flex-end;
+                            align-self: flex-end;
                     font-size: $fz-tiny;
                 }
             }
@@ -554,6 +566,9 @@ nav {
 /////////////////  work  //////////////////
 //////////////////////////////////////////
 .work {
+    .vertical-center {
+        padding:1em 0 3em 0;
+    }
     min-height: 100vh;
     width: 100%;
     padding: 0;
@@ -603,9 +618,9 @@ nav {
                     }
                 }
                 h3 {
-                    -webkit-align-self: center;
                     -ms-flex-item-align: center;
-                    align-self: center;
+                    -webkit-align-self: center;
+                            align-self: center;
                     color: $light;
                     width: 80%;
                     padding: 10% 2% 2%;
@@ -617,9 +632,9 @@ nav {
                     width: 80%;
                     padding: 2% 2% 10%;
                     margin: 0;
-                    -webkit-align-self: center;
                     -ms-flex-item-align: center;
-                    align-self: center;
+                    -webkit-align-self: center;
+                            align-self: center;
                     font-size: $fz-smallest;
                     background-color: transparentize($color-500, .075);
                 }
@@ -630,6 +645,9 @@ nav {
 
 @include breakpoint(medium-screen) {
     .work {
+        .vertical-center {
+            padding:3em 0;
+        }
         padding: 0 .5em 1em .5em;
         .gallery {
             width: 100%;
@@ -653,6 +671,9 @@ nav {
 
 @include breakpoint(big-screen) {
     .work {
+        .vertical-center {
+            padding:2em 0;
+        }
         padding: 0 .5em 1em .5em;
         .gallery {
             width: 100%;
@@ -797,9 +818,9 @@ footer {
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            -webkit-align-self: center;
             -ms-flex-item-align: center;
-            align-self: center;
+            -webkit-align-self: center;
+                    align-self: center;
             h1 {
                 text-shadow: 10px 10px 30px rgba(0, 0, 0, 1);
                 font-size: $fz-small;
@@ -852,9 +873,9 @@ footer {
                     right: 0;
                     bottom: -25px;
                     text-align: center;
-                    -webkit-align-self: flex-end;
                     -ms-flex-item-align: end;
-                    align-self: flex-end;
+                    -webkit-align-self: flex-end;
+                            align-self: flex-end;
                     font-size: $fz-tiny;
                 }
             }
@@ -865,8 +886,8 @@ footer {
 @include breakpoint(medium-screen) {
     .portfolio_piece {
         .port_header {
-            height: 450px;
-            max-height: 450px;
+            height: 400px;
+            max-height: 400px;
             font-size: $fz-med;
             a {
                 h1 {
@@ -901,8 +922,8 @@ footer {
 @include breakpoint(big-screen) {
     .portfolio_piece {
         .port_header {
-            height: 600px;
-            max-height: 600px;
+            height: 500px;
+            max-height: 500px;
             font-size: $fz-bigish;
             a {
                 h1 {
