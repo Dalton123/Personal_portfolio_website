@@ -146,12 +146,42 @@ nav {
     nav ul li {
       display: inline; }
       nav ul li .nav-item {
+        -webkit-animation: fadeIn 1s ease 0.2s 1 both;
+        -moz-animation: fadeIn 1s ease 0.2s 1 both;
+        animation: fadeIn 1s ease 0.2s 1 both;
+        -webkit-animation-backface-visibility: hidden;
+        -moz-animation-backface-visibility: hidden;
+        -ms-animation-backface-visibility: hidden;
+        -o-animation-backface-visibility: hidden;
+        animation-backface-visibility: hidden;
+        -webkit-animation-delay: .2s;
+        animation-delay: .2s;
         font-size: 1.1 em;
         color: #001a16;
         display: inline-block;
         padding: 0;
         margin: 0;
         text-transform: uppercase; }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
         nav ul li .nav-item:hover {
           color: #ff8694; }
 
@@ -524,6 +554,16 @@ footer {
   height: 2em;
   background-color: #d8f2ed; }
   footer .social {
+    -webkit-animation: fadeIn 1s ease 0.2s 1 both;
+    -moz-animation: fadeIn 1s ease 0.2s 1 both;
+    animation: fadeIn 1s ease 0.2s 1 both;
+    -webkit-animation-backface-visibility: hidden;
+    -moz-animation-backface-visibility: hidden;
+    -ms-animation-backface-visibility: hidden;
+    -o-animation-backface-visibility: hidden;
+    animation-backface-visibility: hidden;
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -542,6 +582,26 @@ footer {
     width: 75%;
     margin: 0 auto;
     color: #4db6ac; }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
     footer .social p {
       float: left;
       margin: 0;

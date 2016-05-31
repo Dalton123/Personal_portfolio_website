@@ -278,6 +278,9 @@ nav {
         li {
             display: inline;
             .nav-item {
+                @include fadeIn();
+                -webkit-animation-delay:.2s;
+                        animation-delay:.2s;
                 font-size: $fz-smaller;
                 color: $dark;
                 display: inline-block;
@@ -705,6 +708,9 @@ footer {
     height: 2em;
     background-color: $light;
     .social {
+        @include fadeIn();
+        -webkit-animation-delay:.2s;
+                animation-delay:.2s;
         @include flex-box;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
