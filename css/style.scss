@@ -12,11 +12,11 @@ $delay: .2s;
 // $color-700: rgba(2, 136, 209, 1);
 // $color-900: rgba(1, 87, 155, 1);
 // Blue
-// $color-100: rgba(187, 222, 251, 1);
-// $color-300: rgba(100, 181, 246, 1);
-// $color-500: rgba(33, 150, 243, 1);
-// $color-700: rgba(25, 118, 210, 1);
-// $color-900: rgba(13, 71, 161, 1);
+$color-100: rgba(187, 222, 251, 1);
+$color-300: rgba(100, 181, 246, 1);
+$color-500: rgba(33, 150, 243, 1);
+$color-700: rgba(25, 118, 210, 1);
+$color-900: rgba(13, 71, 161, 1);
 // Blue-Grey
 // $color-100: rgba(207, 216, 220, 1);
 // $color-300: rgba(144, 164, 174, 1);
@@ -24,11 +24,11 @@ $delay: .2s;
 // $color-700: rgba(69, 90, 100, 1);
 // $color-900: rgba(38, 50, 56, 1);
 // TEAL
-$color-100: rgba(178, 229, 219, 1);
-$color-300: rgba(77, 182, 172, 1);
-$color-500: rgba(0, 150, 136, 1);
-$color-700: rgba(0, 121, 107, 1);
-$color-900: rgba(0, 77, 64, 1);
+// $color-100: rgba(178, 229, 219, 1);
+// $color-300: rgba(77, 182, 172, 1);
+// $color-500: rgba(0, 150, 136, 1);
+// $color-700: rgba(0, 121, 107, 1);
+// $color-900: rgba(0, 77, 64, 1);
 // Green
 // $color-100: rgba(200, 230, 201, 1);
 // $color-300: rgba(129, 199, 132, 1);
@@ -816,7 +816,13 @@ footer {
         background-size: cover;
         position: relative;
         @include flex-box;
+        @include fadeIn();
+        -webkit-animation-delay:.2s;
+                animation-delay:.2s;
         a {
+            @include fadeIn();
+            -webkit-animation-delay:.5s;
+                    animation-delay:.5s;
             width: 100%;
             margin: 0 auto;
             -webkit-align-items: center;
@@ -842,11 +848,22 @@ footer {
         h2 {
             margin: 10% auto 10% auto;
             font-size: $fz-small;
+            @include fadeIn();
+            -webkit-animation-delay:.6s;
+                    animation-delay:.6s;
         }
         p {
             margin: 10% auto 10% auto;
             width: 90%;
             font-size: $fz-smaller;
+            @include fadeIn();
+            -webkit-animation-delay:.7s;
+                    animation-delay:.7s;
+        }
+        h3 {
+            @include fadeIn();
+            -webkit-animation-delay:1s;
+                    animation-delay:1s;
         }
         .skills {
             @include flex-box;
@@ -859,6 +876,9 @@ footer {
             -webkit-align-items: flex-end;
             -ms-flex-align: end;
             align-items: flex-end;
+            @include fadeIn();
+            -webkit-animation-delay:1s;
+                    animation-delay:1s;
             .skill {
                 @include flex-box;
                 -webkit-flex-grow: 1;
